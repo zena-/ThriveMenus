@@ -1,0 +1,181 @@
+@media only screen and (max-width: 1108px) {
+
+  html {
+      font-size: 118.75%;
+      /*width: 90%;*/
+    } 
+
+  .wrapper {
+    width: 45em;
+    padding: 5px;
+    /*margin: 1em;*/
+    white-space: nowrap;
+    /*right: 10%;*/
+    display: block;
+    vertical-align: center;
+    /*columns: 2;*/
+  }
+
+  #social {
+    position: fixed;
+    top: 75px;
+    right: 4%;
+    width: auto;
+  }
+
+  #social a {
+    display: inline-block;
+  }
+
+  .col-2 {
+    /*float: left;*/
+    left:10px;
+    top:10px;
+ }
+
+ .side {
+    margin-top: 4em;
+    /*float: left;*/
+    font-size: 15px;
+ }
+
+ button {
+  margin-left: 70px;
+  font: bold 15px Arial;  
+  padding: 6px;
+ }
+
+
+ img {
+    width: 25%;
+    height: auto;
+ }
+
+ #order img {
+    width: 10%;
+    height: auto;
+ }
+
+ #order {
+    padding: 1em;
+ }
+
+ #menu img {
+  width: 55%;
+  height: auto;
+ }
+
+ section {
+  margin-bottom: 1em;
+ }
+
+ footer {
+  padding: 2em;
+ }
+
+
+}
+
+@media only screen and (max-width: 450px) {
+  .wrapper {
+    /*background: silver;*/
+    box-shadow: none;
+    width: 90%;
+  }
+
+ button {
+  margin-left: 20px;
+  font: bold 8px Arial;  
+  padding: 5px;
+ }
+
+  #social {
+    top: 10px;
+  }
+
+ #banner {
+  background: url(../images/Background-Image.png) no-repeat center center;
+  background-size: cover; 
+  top: 0;
+  left: 0;
+  z-index: 1;
+  padding-left: 1em;
+  padding-bottom: 15em;
+} 
+
+ #banner img {
+    width: 45%;
+    height: auto;
+    padding-left: 0.3px;
+ }
+
+ section {
+  margin-bottom: 1em;
+ }
+
+ #location, .join p {
+  font-size: 30%;
+  padding: 0.3em;
+  margin: 0.3em;
+ }
+
+  h3, h2, h4 {
+  font-size: 15px;
+ }
+
+ p {
+  font-size: 12px;
+ }
+
+ .join {
+  padding: 1em;
+ }
+
+#phoneimg {
+  padding: 1em;
+  height: auto;
+}
+
+#phoneimg img {
+  width: 27%;
+  height: auto;
+  left: 1px;
+  /*display: none;*/
+}
+
+.side {
+ margin-top: 0;
+ font-size: 8px; 
+ /*white-space: nowrap;*/
+ /*width: 1px;*/
+ /*height: auto;*/
+ float: right;
+ /*display: list-item;*/
+}
+
+ .wrapper {
+    width: 100%;
+    padding: 0;
+    /*white-space: nowrap;*/
+    /*display: inherit;*/
+    background: silver;
+    /*height: 90%;*/
+  }
+
+#order img {
+    width: 10%;
+    height: auto;
+ }
+
+ #order {
+    padding: .5em;
+ }
+
+ footer {
+  padding: 1em;
+  font-size: 0.3em; 
+ }
+
+
+}
+

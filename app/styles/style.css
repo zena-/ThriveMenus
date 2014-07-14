@@ -1,0 +1,221 @@
+/* fixes */
+html {
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+
+section {
+	margin-bottom: 3em;
+	/*padding: 3em;*/
+}
+
+/* founder */
+.join {
+	padding: 4em;
+	color: rgb(34,34,34);
+	border-top: 1px solid #ccc;
+
+}
+
+.join p {
+	font-size: 14px;
+}
+
+
+/* social */
+#social {
+	position: fixed;
+	top: 185px;
+	right: 20px;
+	width: 40px;
+	z-index: 1;
+}
+
+#social a {
+	display: block;
+	width: 40px;
+	height: 40px;
+	/*background: url(../images/social-icons.png)no-repeat;*/
+	overflow: hidden; /* sets overflow outside the element to hidden*/
+	white-space: nowrap; /* prevent line brakes (text wrapper) */
+	text-indent: 100%; /* indents the link text */ 
+}
+
+a.fbook, a.twit, a.gplus {
+  background: url(../images/social-icons.png) no-repeat;
+}
+
+a.fbook { background-position: 0 0; }
+a.fbook:hover { background-position: -40px 0; }
+a.fbook:active { background-position: -80px 0; }
+
+a.twit { background-position: 0 -40px; }
+a.twit:hover { background-position: -40px -40px; }
+a.twit:active { background-position: -80px -40px; }
+
+a.gplus { background-position: 0 -80px; }
+a.gplus:hover { background-position: -40px -80px; }
+a.gplus:active { background-position: -80px -80px; }
+
+/*//////// order ////////*/
+#order {
+	padding: 3em;
+}
+
+ #order h3 {
+ 	text-align: center;
+ }
+
+ #order img {
+ 	width: 15%;
+ 	height: auto;
+ }
+
+/* banner */
+#banner {
+	background: url(../images/iphone-hand.png) no-repeat right bottom;
+	background-size: 40%; 
+	top: 0;
+	left: 0;
+	/*width: 100%;*/
+	z-index: 1;
+	padding-left: 5em;
+	padding-bottom: 15em;
+	/*height: 100%;*/
+	background-color: rgb(34,34,34);
+}
+
+#banner img {
+	padding-left: 0.5em;
+	width: 27%;
+	height: auto;
+	/*position: absolute;*/
+}
+
+/*img.resize {
+    width: 540px; 
+    height: auto;
+}*/
+
+button {
+	box-shadow: 0 3px 10px #333;
+	color: green;
+    border-radius: 9px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    font: bold 18px Arial;
+    text-decoration: none;
+    margin-left: 75px;
+    padding: 8px;
+    /*margin-top: 10px;*/
+    background-color: rgb(82,179,53);
+}
+ 
+#banner button a {
+	color: white;
+} 
+
+/*//////////   phone image section /////////////*/
+#phoneimg {
+	margin-bottom: 3em;
+	padding: 5em;
+	height: 100%;
+	background: silver;
+}
+
+#phoneimg h2, h4 {
+	color: white;
+	text-align: center;
+}
+
+
+.side {
+	margin-top: 6em;
+	padding: 1em;
+	float: left;
+}
+
+#col img {
+	float: right;
+	position: static;
+}
+
+h5 {
+	color: rgb(57,126,54);
+}
+
+#phoneimg p {
+	color: rgb(34,34,34);
+}
+
+#phoneimg img {
+	width: 25%;
+	height: auto;
+}
+
+/*/////////layout/////*/
+
+.wrapper {
+	background: rgba(255,255,255,0.5);
+	padding: 15px;
+	height: 100%;
+	/*width: 990px;*/
+	margin: 5px 5px; 
+	box-shadow: 0 3px 10px #333;
+}
+
+.col-1 {
+	float: left;
+	/*width: 32%;*/
+}
+
+.col-2 {
+	float: right;
+	/*width: 66%;*/
+}
+
+#clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	height: 0;
+	line-height: 0;
+}
+
+/* location */
+#location {
+	padding: 2em;
+	margin: 4em;
+}
+
+
+/* section menu image */
+
+#menu {
+	/*background: url(../images/Bottom-Tool-Bar.png) no-repeat center center fixed; */
+  	background-size: 30em;
+	display: block;
+	/*z-index:2;*/
+	/*font: 3em;*/
+	width: auto;
+	/*height: 3.5em;*/
+	padding: 2px 22px;
+	/*margin: 15px;*/
+	top: 25%;
+	left: 0;
+	font-size: 2em;
+	display: block;
+}
+
+/*/////////footer/////*/
+
+footer {
+	text-align: center;
+	font-size: 1em;
+	padding: 3em;
+	background: #eee;
+	border-top: 1px solid #ccc;
+	text-align: center;
+}
