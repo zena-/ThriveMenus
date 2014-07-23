@@ -1,18 +1,41 @@
-// console.log('\'Allo \'Allo!');
-
 $(function(){
 
-  // $( "#name" ).autocomplete({ appendTo: "#someElem" });
+///////phone imge fade ////////
+    'use strict';
+	$('#phoneimg').hover(function(){
+	    $('#phone').stop().fadeTo(400,1);
+	}, function() {
+	    $('#phone').stop().fadeTo(400,0.60);
+	});
 
-  // $( "#name" ).autocomplete( "option", "appendTo", "#someElem" );
+////////// signin popup ////////
 
-	///////phone imge fade ////////
-  $('#phoneimg').hover(function(){
-   $('#phone').stop().fadeTo(400,1);
-  }, function() {
-    $('#phone').stop().fadeTo(400,0.60);
-  });
+    $('#modal_trigger').leanModal({top : 200, overlay : 0.6, closeButton: '.modal_close' });
 
-  ////////// Gelolocation ////////
-  	 
-})
+    $(function () {
+	    // Calling Login Form
+	    $('#login_form').click(function () {
+	        $('.social_login').hide();
+	        $('.user_login').show();
+	        return false;
+	    });
+	 
+	    // Calling Register Form
+	    $('#register_form').click(function () {
+	        $('.social_login').hide();
+	        $('.user_register').show();
+	        $('.header_title').text('Register');
+	        return false;
+	    });
+	 
+	    // Going back to Social Forms
+	    $('.back_btn').click(function () {
+	        $('.user_login').hide();
+	        $('.user_register').hide();
+	        $('.social_login').show();
+	        $('.header_title').text('Login');
+	        return false;
+	    });
+	});
+
+});
