@@ -40,8 +40,8 @@
  }
 
  button {
-  margin-left: 70px;
-  font: bold 15px Arial;  
+/*  margin-left: 70px;
+*/  font: bold 13px Arial;  
   padding: 6px;
  }
 
@@ -84,7 +84,7 @@
   }
 
  button {
-  margin-left: 20px;
+  /*margin-left: 20px;*/
   font: bold 8px Arial;  
   padding: 5px;
  }

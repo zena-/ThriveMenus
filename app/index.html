@@ -30,23 +30,77 @@
 
     </head>
     <body>
-        <!--facebook signin-->
+        <!--facebook login//signin-->
         <script>
+
+        // This is called with the results from from FB.getLoginStatus().
+          function statusChangeCallback(response) {
+            console.log('statusChangeCallback');
+            console.log(response);
+            // The response object is returned with a status field that lets the
+            // app know the current login status of the person.
+            // Full docs on the response object can be found in the documentation
+            // for FB.getLoginStatus().
+            if (response.status === 'connected') {
+              // Logged into your app and Facebook.
+              testAPI();
+            } else if (response.status === 'not_authorized') {
+              // The person is logged into Facebook, but not your app.
+              document.getElementById('status').innerHTML = 'Please log ' +
+                'into this app.';
+            } else {
+              // The person is not logged into Facebook, so we're not sure if
+              // they are logged into this app or not.
+              document.getElementById('status').innerHTML = 'Please log ' +
+                'into Facebook.';
+            }
+          }
+
+          // This function is called when someone finishes with the Login
+          // Button.  See the onlogin handler attached to it in the sample
+          // code below.
+          function checkLoginState() {
+            FB.getLoginStatus(function(response) {
+              statusChangeCallback(response);
+            });
+          }
+
+          //////////
+
           window.fbAsyncInit = function() {
             FB.init({
               appId      : '{your-app-id}', // You can find this ID using the ( https://www.facebook.com/login.php?next=https%3A%2F%2Fdevelopers.facebook.com%2Fapps )
+              cookie     : true,
               xfbml      : true,
               version    : 'v2.0'
             });
+          //};
+
+          FB.getLoginStatus(function(response) {
+            statusChangeCallback(response);
+          });
+
           };
 
+          // Load the SDK asynchronously
           (function(d, s, id){
              var js, fjs = d.getElementsByTagName(s)[0];
              if (d.getElementById(id)) {return;}
              js = d.createElement(s); js.id = id;
-             js.src = "//connect.facebook.net/es_en/sdk/debug.js";
+             js.src = "//connect.facebook.net/es_en/sdk.js";
              fjs.parentNode.insertBefore(js, fjs);
            }(document, 'script', 'facebook-jssdk'));
+
+          // Here we run a very simple test of the Graph API after login is
+          // successful.  See statusChangeCallback() for when this call is made.
+          function testAPI() {
+            console.log('Welcome!  Fetching your information.... ');
+            FB.api('/me', function(response) {
+              console.log('Successful login for: ' + response.name);
+              document.getElementById('status').innerHTML =
+                'Thanks for logging in, ' + response.name + '!';
+            });
+          }
         </script>
 
         <!--[if lt IE 10]>
@@ -59,29 +113,27 @@
             <br>
             <h2>Hungry For Healthy?</h2> -->
             <br> 
-            <br>
             <button class="park"><a href="http://signup.thriveinthepark.com/"target=_"blank">#ThriveInThePark</a></button> 
             <br>
 
-
-            <br> <!-- facebook like -->
-            <div
-              class="fb-like"
-              data-send="true"
-              data-width="450"
-              data-show-faces="true">
-            </div>
-
-
-            <br>
-            <br> <!-- twitter -->
+            <!-- twitter -->
             <!-- <a href="https://twitter.com/share" class="twitter-share-button" data-related="jasoncosta" data-lang="en" data-size="large" data-count="none">Tweet</a> -->
 
-            <a href="https://twitter.com/intent/tweet?button_hashtag=ThriveMenu&text=My%20sexy%20is%20from%20Thrive%20Menu" class="twitter-hashtag-button" data-lang="en" data-related="jasoncosta" data-size="large">Tweet #ThriveMenu</a>
+            <a id="tm" href="https://twitter.com/intent/tweet?button_hashtag=ThriveMenu&text=My%20sexy%20Is%20From%20Eating%20Healthy" class="twitter-hashtag-button" data-lang="en" data-related="jasoncosta" data-size="large">Tweet #ThriveMenu</a>
 
-            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+            </script>
 
         </section>
+
+        <!-- facebook login button -->
+        <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+        </fb:login-button>
+
+        <div id="status">
+        </div>
+
+
 
         <a id="modal_trigger" href="#modal" class="btn">Login</a>
 
@@ -95,10 +147,15 @@
                 <!-- Social Login -->
                 <div class="social_login">
                     <div class="clearfix">
-                        <a class="social_box fb" href="#"><span class="icon_title">Connect with Facebook</span></a><a class="social_box google" href="gplus-quickstart-javascript/index.html"><span class="icon_title">Connect with Google</span></a>
+                        <a class="social_box fb" href="#">
+                            <span class="icon_title">Connect with Facebook</span>
+                        </a>
+                        <a class="social_box google" href="#">
+                            <span class="icon_title">Connect with Google</span>
+                        </a>
                     </div>
                  
-                    <div class="centeredText">
+                    <!-- <div class="centeredText">
                         <span>Or use your Email address</span>
                     </div>
                  
@@ -112,10 +169,10 @@
                             "register_form">Sign up</a>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- Username & Password Login form -->
-                <div class="user_login">
+                <!-- <div class="user_login">
                     <form>
                         <label>Email / Username</label> <input type="text"><br>
                         <label>Password</label> <input type="password"><br>
@@ -137,10 +194,10 @@
                     </form>
                     
                     <a class="forgot_password" href="#">Forgot password?</a>
-                </div>
+                </div> -->
 
                 <!-- Register Form -->
-                <div class="user_register">
+                <!-- <div class="user_register">
                     <form>
                         <label>Full Name</label> <input type="text"><br>
                         <label>Email Address</label> <input type="email"><br>
@@ -161,7 +218,7 @@
                             </div>
                         </div>
                     </form>
-                </div>
+                </div> -->
 
             </section>
         </div>
@@ -169,14 +226,23 @@
 
         <section id="location">
             <center>
-            <h3>Healthy food delivery</h3>
-            <p>Order healthy food delivery from the most healthiest restaurants.
-                <br>
-                Enter your location to reveal the healthiest restaurants in your neighborhood.</p>
+                <h3>Healthy food delivery</h3>
+                <p>Order healthy food delivery from the most healthiest restaurants.
+                    <br>
+                    Enter your location to reveal the healthiest restaurants in your neighborhood.</p>
 
-            <!-- <label for="location">Location</label> -->
-           <input type="text" id="name" name="location" placeholder="e.g. New York, NY 10014">
-           <input type="submit" value="Find Restaurants">   
+                <!-- <label for="location">Location</label> -->
+               <input type="text" id="name" name="location" placeholder="e.g. New York, NY 10014">
+               <input type="submit" value="Find Restaurants">   
+
+               <br>
+               <br> <!-- facebook like -->
+                <div
+                  class="fb-like"
+                  data-send="true"
+                  data-width="450"
+                  data-show-faces="true">
+                </div>
             </center>
         </section>
 

@@ -29,9 +29,9 @@ body {
 }
 
 #modal_trigger  {
-    margin: 100px auto;
-     width: 100px;
-     display: block;
+    margin: 30px auto;
+    /*width: 100px;*/
+    display: block;
 }
  
 .btn  {
