@@ -30,6 +30,25 @@
 
     </head>
     <body>
+        <!--facebook signin-->
+        <script>
+          window.fbAsyncInit = function() {
+            FB.init({
+              appId      : '{your-app-id}', // You can find this ID using the ( https://www.facebook.com/login.php?next=https%3A%2F%2Fdevelopers.facebook.com%2Fapps )
+              xfbml      : true,
+              version    : 'v2.0'
+            });
+          };
+
+          (function(d, s, id){
+             var js, fjs = d.getElementsByTagName(s)[0];
+             if (d.getElementById(id)) {return;}
+             js = d.createElement(s); js.id = id;
+             js.src = "//connect.facebook.net/es_en/sdk/debug.js";
+             fjs.parentNode.insertBefore(js, fjs);
+           }(document, 'script', 'facebook-jssdk'));
+        </script>
+
         <!--[if lt IE 10]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -41,7 +60,27 @@
             <h2>Hungry For Healthy?</h2> -->
             <br> 
             <br>
-            <button class="park"><a href="http://signup.thriveinthepark.com/"target=_"blank">#ThriveInThePark</a></button>
+            <button class="park"><a href="http://signup.thriveinthepark.com/"target=_"blank">#ThriveInThePark</a></button> 
+            <br>
+
+
+            <br> <!-- facebook like -->
+            <div
+              class="fb-like"
+              data-send="true"
+              data-width="450"
+              data-show-faces="true">
+            </div>
+
+
+            <br>
+            <br> <!-- twitter -->
+            <!-- <a href="https://twitter.com/share" class="twitter-share-button" data-related="jasoncosta" data-lang="en" data-size="large" data-count="none">Tweet</a> -->
+
+            <a href="https://twitter.com/intent/tweet?button_hashtag=ThriveMenu&text=My%20sexy%20is%20from%20Thrive%20Menu" class="twitter-hashtag-button" data-lang="en" data-related="jasoncosta" data-size="large">Tweet #ThriveMenu</a>
+
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
         </section>
 
         <a id="modal_trigger" href="#modal" class="btn">Login</a>
