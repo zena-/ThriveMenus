@@ -18,12 +18,11 @@
         <link rel="stylesheet" href="styles/responsive.css">
         <link rel="stylesheet" type="text/css" href="styles/responsive.css">
         <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <!-- endbuild -->
         <!-- build:js scripts/vendor/modernizr.js -->
         <script src="../bower_components/modernizr/modernizr.js"></script>
-        <!-- <script src="../bower_components/jquery-ui/jquery-ui.js"></script> -->
-        <!--<script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.leanmodal/1.1/jquery.leanmodal.min.js"></script> 
-        <script type="text/javascript" src="js/jquery.leanModal.min.js"></script> -->
+        
         <script src="../bower_components/react/react.js"></script>
         <script src="../bower_components/jsx-loader/index.js"></script>
         <!-- endbuild -->
@@ -107,7 +106,7 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <section id="banner">
+        <section id="banner" class="jumbotron">
             <img src="images/Thrive-Menu-Logo.png">
             <!-- <h1>Thrive Menu</h1>
             <br>
@@ -135,69 +134,65 @@
 
 
 
-        <a id="modal_trigger" href="#modal" class="btn">Login</a>
+        <!-- Button trigger modal -->
+        <button id="trig" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+          Sign In
+        </button>
 
-        <div id="modal" class="popupContainer" style="display:none;">
-            <header class="popupHeader">
-                <span class="header_title">Login</span>
-                <span class="modal_close"><i class="fa fa-times"></i></span>
-            </header>
-         
-            <section class="popupBody">
-                <!-- Social Login -->
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">Sign in</h4>
+              </div>
+              <div class="modal-body">
+
+            <!-- Social Login -->
                 <div class="social_login">
-                    <div class="clearfix">
+                    <div id="clearfix">
                         <a class="social_box fb" href="#">
-                            <span class="icon_title">Connect with Facebook</span>
+                            <span class="icon_title">Login with Facebook</span>
                         </a>
                         <a class="social_box google" href="#">
-                            <span class="icon_title">Connect with Google</span>
+                            <span class="icon_title">Login with Google</span>
                         </a>
                     </div>
                  
-                    <!-- <div class="centeredText">
-                        <span>Or use your Email address</span>
-                    </div>
-                 
-                    <div class="action_btns">
-                        <div class="one_half">
-                            <a class="btn" href="#" id="login_form" name="login_form">Login</a>
-                        </div>
-                 
-                        <div class="one_half last">
-                            <a class="btn" href="#" id="register_form" name=
-                            "register_form">Sign up</a>
-                        </div>
-                    </div>
-                </div> -->
+                <div class="centeredText">
+                    <span>Or with Email</span>
+                </div>
 
                 <!-- Username & Password Login form -->
-                <!-- <div class="user_login">
-                    <form>
-                        <label>Email / Username</label> <input type="text"><br>
-                        <label>Password</label> <input type="password"><br>
-                 
-                        <div class="checkbox">
-                            <input id="remember" type="checkbox"> <label for=
-                            "remember">Remember me on this computer</label>
-                        </div>
-                 
-                        <div class="action_btns">
-                            <div class="one_half">
-                                <a class="btn back_btn" href="#">Back</a>
-                            </div>
-                 
-                            <div class="one_half last">
-                                <a class="btn btn_red" href="#">Login</a>
-                            </div>
-                        </div>
+                <!-- <div class="user_login"> -->
+                    <form class="form-inline">
+                      <input type="text" class="input-small" placeholder="Email">
+                      <input type="password" class="input-small" placeholder="Password">
+                      <label class="checkbox">
+                        <input type="checkbox"> Remember me
+                      </label>
+                      <button type="submit" class="btn">Sign in</button>
                     </form>
                     
                     <a class="forgot_password" href="#">Forgot password?</a>
-                </div> -->
+                <!-- </div> -->
+             
+                <div class="action_btns">
+                    <!-- <div class="one_half">
+                        <a class="btn" href="#" id="login_form" name="login_form">Login</a>
+                    </div> --> 
+             
+                    <div class="one_half last">
+                        <a class="btn" href="#" id="register_form" name=
+                        "register_form">Sign up</a>
+                    </div>
+                </div>
+                </div>
+
 
                 <!-- Register Form -->
-                <!-- <div class="user_register">
+                <div class="user_register">
                     <form>
                         <label>Full Name</label> <input type="text"><br>
                         <label>Email Address</label> <input type="email"><br>
@@ -218,9 +213,15 @@
                             </div>
                         </div>
                     </form>
-                </div> -->
+                </div>
 
-            </section>
+          </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
         </div>
 
 
@@ -248,7 +249,9 @@
 
         <section class="join">
             <h3>Join thousands of people eating healthy every week.</h3>
-            <p>Founded by Benjamin Carlisle Huffman and CJ Richards. Two guys who wanted to bring healthy eating to every home. Order from some of New Yorks best restaurants, across all your favorite cuisines. Dishes are often cooked in a healthier way and many of our restaurants don't otherwise deliver.</p>
+            <blockquote>
+                <p>Founded by CJ Richards and Benjamin Huffman. Two guys who wanted to bring healthy eating to every home. Order from some of New Yorks best restaurants, across all your favorite cuisines. Dishes are often cooked in a healthier way and many of our restaurants don't otherwise deliver.</p>
+            </blockquote>
         </section>
         
         <section id="phoneimg">
@@ -281,25 +284,25 @@
             <center>
             <div id="clearfix" class="wrapper"> 
                 <!-- <div id="column1"> -->
-                    <a><img src="images/Gluten-Free-Icon.png" onmouseover="this.src='images/Gluten-free2.png'" onmouseout="this.src='images/Gluten-Free-Icon.png'"/></a>
+                    <a><img src="images/Gluten-Free-Icon.png" onmouseover="this.src='images/Gluten-free2.png'" onmouseout="this.src='images/Gluten-Free-Icon.png'" class="img-circle" type="button" class="btn btn-default pop" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."/></a>
 
-                    <a><img src="images/High-Protein-Icon.png" onmouseover="this.src='images/High-Protien2.png'" onmouseout="this.src='images/High-Protein-Icon.png'"/></a>
+                    <a><img src="images/High-Protein-Icon.png" onmouseover="this.src='images/High-Protien2.png'" onmouseout="this.src='images/High-Protein-Icon.png'" class="img-circle"/></a>
 
-                    <a><img src="images/kosher-Icon.png" onmouseover="this.src='images/kosher2.png'" onmouseout="this.src='images/kosher-Icon.png'"/></a>
+                    <a><img src="images/kosher-Icon.png" onmouseover="this.src='images/kosher2.png'" onmouseout="this.src='images/kosher-Icon.png'" class="img-circle"/></a>
 
-                    <a><img src="images/Low-Carb-Icon.png" onmouseover="this.src='images/Low-carb2.png'" onmouseout="this.src='images/Low-Carb-Icon.png'"/></a>
+                    <a><img src="images/Low-Carb-Icon.png" onmouseover="this.src='images/Low-carb2.png'" onmouseout="this.src='images/Low-Carb-Icon.png'" class="img-circle"/></a>
 
-                    <a><img src="images/Low-Fat-Icon.png" onmouseover="this.src='images/Low-fat2.png'" onmouseout="this.src='images/Low-Fat-Icon.png'"/></a>
+                    <a><img src="images/Low-Fat-Icon.png" onmouseover="this.src='images/Low-fat2.png'" onmouseout="this.src='images/Low-Fat-Icon.png'" class="img-circle"/></a>
                 <!-- </div>  -->
 
                 <!-- <div id="column2"> -->
-                    <a><img src="images/Organic-Icon.png" onmouseover="this.src='images/Organic2 .png'" onmouseout="this.src='images/Organic-Icon.png'"/></a>
+                    <a><img src="images/Organic-Icon.png" onmouseover="this.src='images/Organic2 .png'" onmouseout="this.src='images/Organic-Icon.png'" class="img-circle"/></a>
 
-                    <a><img src="images/Paleo-Icon.png" onmouseover="this.src='images/paleo2.png'" onmouseout="this.src='images/Paleo-Icon.png'"/></a>
+                    <a><img src="images/Paleo-Icon.png" onmouseover="this.src='images/paleo2.png'" onmouseout="this.src='images/Paleo-Icon.png'" class="img-circle"/></a>
 
-                    <a><img src="images/Vegan-Icon.png" onmouseover="this.src='images/Vegan2.png'" onmouseout="this.src='images/Vegan-Icon.png'"/></a>
+                    <a><img src="images/Vegan-Icon.png" onmouseover="this.src='images/Vegan2.png'" onmouseout="this.src='images/Vegan-Icon.png'" class="img-circle"/></a>
 
-                    <a><img src="images/Vegetarian-Icon.png" onmouseover="this.src='images/Vegetarian2.png'" onmouseout="this.src='images/Vegetarian-Icon.png'"/></a>
+                    <a><img src="images/Vegetarian-Icon.png" onmouseover="this.src='images/Vegetarian2.png'" onmouseout="this.src='images/Vegetarian-Icon.png'" class="img-circle"/></a>
                 <!-- </div>  -->
             </div>
             </center>
@@ -311,9 +314,9 @@
           <a class="gplus" href="https://plus.google.com/thrivemenu"target=_"blank" title="Google Plus">Google Plus</a>
         </div>
 
-        <section id="menu">
+        <section id="menu" class="clearfix">
             <center>
-            <img src="images/Bottom-Tool-Bar.png">
+            <img src="images//MenuPhones1.jpg">
             </center>
         </section>
 
@@ -327,10 +330,9 @@
         <!-- bower:js -->
         <script src="../bower_components/jquery/dist/jquery.js"></script>
         <script src="../bower_components/jquery-ui/jquery-ui.js"></script>
-        <script src="scripts/leanM.js"></script>
+        <!-- // <script src="scripts/leanM.js"></script> -->
         <!-- endbower -->
         <!-- endbuild -->
-        <!-- <script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script> -->
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
@@ -344,6 +346,7 @@
 
         <!-- build:js({app,.tmp}) scripts/main.js -->
         <script src="scripts/main.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
         <!-- endbuild -->
 </body>
 </html>

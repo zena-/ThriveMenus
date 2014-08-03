@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,700italic,400italic);
+
 // bower:scss
 // endbower
 
@@ -5,6 +7,9 @@ body {
     background: #fafafa;
     // font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     // color: #333;
+    font-size: 100%;
+    font-family: 'Source Sans Pro', sans-serif; 
+    color: #666;
 }
 
 ////// founder section
@@ -45,6 +50,10 @@ body {
     padding-left: 0.5em;
     width: 27%;
     height: auto; }
+}
+
+.park {
+    margin: 15px;
 }
 
 ////// button 
@@ -95,9 +104,116 @@ button {
         position: static; }    
 }
 
+///// fix
 html {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
+
+section {
+    margin-bottom: 3em;
+}
+
+.wrapper {
+    background: rgba(255,255,255,0.5);
+    padding: 15px;
+    height: 100%;
+    margin: 5px 5px; 
+    box-shadow: 0 3px 10px #333;
+}
+
+.col-1 {
+    float: left;
+}
+
+.col-2 {
+    float: right;
+}
+
+#clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+    line-height: 0;
+}
+
+#location {
+    // padding: 2em;
+    margin: 4em;
+}
+
+////// section menu image 
+
+#menu {
+    // background: url(../images/Bottom-Tool-Bar.png) no-repeat center center fixed; 
+    background-size: 30em;
+    display: block;
+    // z-index:2;
+    // font: 3em;
+    width: auto;
+    // height: 3.5em;
+    padding: 2px 22px;
+    // margin: 15px;
+    top: 25%;
+    left: 0;
+    font-size: 2em;
+    display: block;
+}
+
+///////// footer  
+
+footer {
+    text-align: center;
+    font-size: 1em;
+    padding: 2em;
+    background: #eee;
+    border-top: 1px solid #ccc;
+    text-align: center;
+}
+
+#trig {
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  z-index: 1;
+}
+
+///////// social
+#social {
+  position: fixed;
+  top: 185px;
+  right: 20px;
+  width: 40px;
+  z-index: 1;
+}
+
+#social a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  /*background: url(../images/social-icons.png)no-repeat;*/
+  overflow: hidden; /* sets overflow outside the element to hidden*/
+  white-space: nowrap; /* prevent line brakes (text wrapper) */
+  text-indent: 100%; /* indents the link text */ 
+}
+
+a.fbook, a.twit, a.gplus {
+  background: url(../images/social-icons.png) no-repeat;
+}
+
+a.fbook { background-position: 0 0; }
+a.fbook:hover { background-position: -40px 0; }
+a.fbook:active { background-position: -80px 0; }
+
+a.twit { background-position: 0 -40px; }
+a.twit:hover { background-position: -40px -40px; }
+a.twit:active { background-position: -80px -40px; }
+
+a.gplus { background-position: 0 -80px; }
+a.gplus:hover { background-position: -40px -80px; }
+a.gplus:active { background-position: -80px -80px; }
+

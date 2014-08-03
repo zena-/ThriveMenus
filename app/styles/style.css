@@ -1,10 +1,10 @@
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,700italic,400italic);
+/*@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,700italic,400italic);*/
 
-body {
-    font-family: 'Source Sans Pro', sans-serif; 
+/*body {
+    font-family: 'Source Sans Pro', sans-serif; */
     /*font-size: 14px; */
-    color: #666;
-}
+  /*  color: #666;
+}*/
 
 /* Overlay when Modal is open */
 #lean_overlay {
@@ -28,11 +28,11 @@ body {
     background: #FFF;
 }
 
-#modal_trigger  {
-    margin: 30px auto;
+/*#modal_trigger  {*/
+    /*margin: 30px auto;*/
     /*width: 100px;*/
-    display: block;
-}
+    /*display: block;*/
+/*}*/
  
 .btn  {
     padding: 10px 20px;
@@ -74,12 +74,12 @@ a.btn_red  {
 }
 
 /* Popup Styles*/
-.popupHeader  {
+#myModalLabel  {
     font-size: 16px;
      text-transform:  uppercase;
-}
+/*}*/
  
-.popupHeader  {
+/*#myModalLabel  {*/
     background: #F4F4F2;
      position: relative;
      padding: 10px 20px;
@@ -87,7 +87,7 @@ a.btn_red  {
      font-weight: bold;
 }
  
-.popupHeader .modal_close  {
+#myModalLabel .close  {
     position:  absolute;
      right:  0;
      top: 0;
@@ -98,7 +98,7 @@ a.btn_red  {
      font-size: 16px;
 }
  
-.popupBody  {
+.modal-body  {
     padding: 15px;
 }
 
@@ -108,6 +108,7 @@ a.btn_red  {
     display: block;
      clear: both;
      padding: 10px;
+     /*width: 50%;*/
      margin-bottom:  10px;
      background:  #F4F4F2;
      overflow:  hidden;
@@ -166,14 +167,15 @@ a.btn_red  {
 
 /* User Login Form */
 .user_login  {
-    display:  none;
+    /*display:  none;*/
+    width: 50%;
 }
  
 .user_login label  {
     display:  block;
      margin-bottom: 5px;
 }
- 
+ /*
 .user_login input[type="text"],  .user_login input[type="email"],  .user_login input[type="password"]  {
     display:  block;
      width: 90%;
@@ -181,7 +183,7 @@ a.btn_red  {
      border: 1px solid #DDD;
      color: #666;
 }
- 
+ */
 .user_login input[type="checkbox"]  {
     float: left;
      margin-right: 5px;
@@ -193,7 +195,7 @@ a.btn_red  {
  
  
 .user_login .checkbox  {
-    margin-bottom:  10px;
+    /*margin-bottom:  10px;*/
      clear:  both;
      overflow:  hidden;
 }
@@ -249,10 +251,10 @@ a.btn_red  {
   	background-size: cover;
 }*/
 
-section {
-	margin-bottom: 3em;
+/*section {*/
+	/*margin-bottom: 3em;*/
 	/*padding: 3em;*/
-}
+/*}*/
 
 /* founder */
 /*.join {
@@ -268,7 +270,7 @@ section {
 
 
 /* social */
-#social {
+/*#social {
 	position: fixed;
 	top: 185px;
 	right: 20px;
@@ -279,14 +281,13 @@ section {
 #social a {
 	display: block;
 	width: 40px;
-	height: 40px;
-	/*background: url(../images/social-icons.png)no-repeat;*/
-	overflow: hidden; /* sets overflow outside the element to hidden*/
-	white-space: nowrap; /* prevent line brakes (text wrapper) */
-	text-indent: 100%; /* indents the link text */ 
-}
+	height: 40px;*/
+	/* overflow: hidden; /* sets overflow outside the element to hidden*/
+	/* white-space: nowrap; /* prevent line brakes (text wrapper) */
+	/* text-indent: 100%; /* indents the link text */ 
+/*}*/
 
-a.fbook, a.twit, a.gplus {
+/*a.fbook, a.twit, a.gplus {
   background: url(../images/social-icons.png) no-repeat;
 }
 
@@ -300,7 +301,7 @@ a.twit:active { background-position: -80px -40px; }
 
 a.gplus { background-position: 0 -80px; }
 a.gplus:hover { background-position: -40px -80px; }
-a.gplus:active { background-position: -80px -80px; }
+a.gplus:active { background-position: -80px -80px; }*/
 
 /*//////// order ////////*/
 /*#order {
@@ -399,66 +400,66 @@ a.gplus:active { background-position: -80px -80px; }
 */
 /*/////////layout/////*/
 
-.wrapper {
+/*.wrapper {
 	background: rgba(255,255,255,0.5);
 	padding: 15px;
-	height: 100%;
+	height: 100%;*/
 	/*width: 990px;*/
-	margin: 5px 5px; 
-	box-shadow: 0 3px 10px #333;
-}
+	/*margin: 5px 5px; */
+	/*box-shadow: 0 3px 10px #333;*/
+/*}*/
 
-.col-1 {
-	float: left;
+/*.col-1 {*/
+	/*float: left;*/
 	/*width: 32%;*/
-}
+/*}*/
 
-.col-2 {
-	float: right;
+/*.col-2 {*/
+	/*float: right;*/
 	/*width: 66%;*/
-}
+/*}*/
 
-#clearfix:after {
+/*#clearfix:after {
 	content: ".";
 	display: block;
 	clear: both;
 	visibility: hidden;
 	height: 0;
 	line-height: 0;
-}
+}*/
 
 /* location */
-#location {
+/*#location {*/
 	/*padding: 2em;*/
-	margin: 4em;
-}
+	/*margin: 4em;*/
+/*}*/
 
 
 /* section menu image */
 
-#menu {
+/*#menu {*/
 	/*background: url(../images/Bottom-Tool-Bar.png) no-repeat center center fixed; */
-  	background-size: 30em;
-	display: block;
+  	/*background-size: 30em;
+	display: block;*/
 	/*z-index:2;*/
 	/*font: 3em;*/
-	width: auto;
+	/*width: auto;*/
 	/*height: 3.5em;*/
-	padding: 2px 22px;
+	/*padding: 2px 22px;*/
 	/*margin: 15px;*/
-	top: 25%;
+	/*top: 25%;
 	left: 0;
 	font-size: 2em;
 	display: block;
-}
+}*/
 
 /*/////////footer/////*/
 
-footer {
+/*footer {
 	text-align: center;
 	font-size: 1em;
 	padding: 3em;
 	background: #eee;
 	border-top: 1px solid #ccc;
 	text-align: center;
-}
+}*/
