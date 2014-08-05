@@ -6,7 +6,7 @@
     } 
 
   .wrapper {
-    width: 45em;
+    width: 100%;
     padding: 5px;
     /*margin: 1em;*/
     white-space: nowrap;
@@ -70,7 +70,7 @@
  }
 
  footer {
-  padding: 2em;
+  padding: 1em;
  }
 
 
@@ -78,9 +78,9 @@
 
 @media only screen and (max-width: 450px) {
   .wrapper {
-    /*background: silver;*/
     box-shadow: none;
     width: 90%;
+    background-color: 
   }
 
  button {
@@ -120,24 +120,40 @@
  }
 
   h3, h2, h4 {
-  font-size: 15px;
+  font-size: 4em;
  }
 
  p {
-  font-size: 12px;
+  font-size: 10px;
  }
 
  .join {
   padding: 1em;
  }
 
+blockquote {
+  /*font-size: 40px;*/
+}
+
+#phoneimg h2 {
+  /*padding: 1em;*/
+  /*height: auto;*/
+  font-size: 1.5em;
+  color: black;
+}
+
+#phoneimg h4 {
+  font-size: 1em;
+  color: black;
+}
+
 #phoneimg {
-  padding: 1em;
-  height: auto;
+  padding: 0;
+  /*background: white; */
 }
 
 #phoneimg img {
-  width: 27%;
+  width: 47%;
   height: auto;
   left: 1px;
   /*display: none;*/
@@ -150,6 +166,8 @@
  /*width: 1px;*/
  /*height: auto;*/
  float: right;
+ padding: .5em;
+ text-align: center;
  /*display: list-item;*/
 }
 
@@ -162,6 +180,11 @@
     /*height: 90%;*/
   }
 
+#menu {
+  margin: 1em;
+  height: 1em;
+}  
+
 #order img {
     width: 10%;
     height: auto;
@@ -173,9 +196,39 @@
 
  footer {
   padding: 1em;
-  font-size: 0.3em; 
+  font-size: 1em; 
  }
 
+ footer h5 {
+  font-size: 1em;
+ }
+
+
+#menu-links {
+  display: none;
+  background: white;
+  clear: both;
+}
+
+#navbar nav a.menu-icon {
+  display: block;
+  float: right;
+  font-size: 1.5em;
+  padding: 10px 20px;
+  width: auto;
+}
+
+#navbar nav a {
+  display: block;
+  width: 100%;
+  border-left: 0;
+  border-top: 1px dotted #ccc;
+  text-align: left;
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+  clear: both;
+  }
 
 }
 
