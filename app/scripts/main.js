@@ -1,5 +1,11 @@
 $(function(){
 
+	/////////// slider ////////
+
+     $('.carousel').carousel({
+		  interval: 5000
+		})
+
 ///////phone imge fade ////////
     'use strict';
 	$('#phoneimg').hover(function(){

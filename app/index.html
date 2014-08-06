@@ -207,13 +207,64 @@
                 </center>
             </section>
 
-            <section id="menus">
-<!-- menus -->
+            <div id="part"></div>
+
+            <!-- Restaurant -->
+            <section id="rest">
+                <h3 class="text-center">Restaurant</h3>
+
+                <div id="carousel-example" class="carousel slide" data-ride="carousel">
+                  <!-- Indicators -->
+                  <ol class="carousel-indicators">
+                    <li data-target="#carousel-example" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example" data-slide-to="1"></li>
+                    <li data-target="#carousel-example" data-slide-to="2"></li>
+                    <li data-target="#carousel-example" data-slide-to="3"></li>
+                  </ol>
+
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner">
+                    <div class="item active">
+                      <img src="images/Mangia.png" alt="">
+                      <div class="carousel-caption">
+                        <small>Mangia 50 west 57th street</small>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <img src="images/Terri.png" alt="">
+                      <div class="carousel-caption">
+                        <small>Terri 60 west 23rd st.</small>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <img src="images/Beyond .png" alt="">
+                      <div class="carousel-caption">
+                        <small>Beyond Sushi 229 East 14 st.</small>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <img src="images/Calista.png" alt="">
+                      <div class="carousel-caption">
+                        <small>Calista Superfoods 1217 Lexington ave.</small>
+                      </div>
+                    </div>
+                    ...
+                  </div>
+
+                  <!-- Controls -->
+                  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                  </a>
+                  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                  </a>
+                </div>
+
             </section>
 
             <section id="phoneimg">
-                <h2>We Understand Healthy. <br> We Understand Delicious.</h2>
-                <h4>Healthy food shouldn't be boring and neither should your diet.</h4>
+                <h3 class="text-center">We Understand Healthy. <br> We Understand Delicious. <br>
+                <small>Healthy food shouldn't be boring and neither should your diet.</small></h3>
 
                 <center>
                     <div id="col clearfix" class="wrapper">
@@ -365,6 +416,9 @@
         <!-- build:js({app,.tmp}) scripts/main.js -->
         <script src="scripts/main.js"></script>
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+        <script src="jquery.min.js"></script>
+        <script src="jssor.slider.mini.js"></script>
         <!-- endbuild -->
 </body>
 </html>

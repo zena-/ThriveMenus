@@ -1,8 +1,10 @@
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,700italic,400italic);
+@import url(http://fonts.googleapis.com/css?family=Playfair+Display+SC);
 
 $color: rgb(34,34,34); // black
 $green: rgb(58, 127, 56);
 $clear: rgba(255,255,255,0.5);
+$font: 'Playfair Display SC', serif;
 
 // bower:scss
 // endbower
@@ -14,12 +16,15 @@ body {
     font-size: 100%;
     font-family: 'Source Sans Pro', sans-serif; 
     color: #667;
+    h3 {
+    font-family: $font
+    }
 }
 
 //// order section 
 #order {
     padding: 5em;
-    border-top: 1px solid $green; 
+    //border-top: 1px solid $green; 
 
     h3 {
     text-align: center; 
@@ -143,6 +148,7 @@ section {
     padding: 5em;
     margin: 7em;
     text-align: center;
+    border-bottom: 1px solid $green; 
 }
 
 ////// founder section
@@ -175,21 +181,22 @@ section {
 
 ////// section menu image 
 
-#menu {
-    background: url(../images/MenuPhones1.jpg) no-repeat center center fixed; 
-    background-size: 30em;
+#rest {
+    //background-size: 8em;
     display: block;
-    // font: 3em;
     width: auto;
-    height: 2em;
     padding: 2px 22px;
-    // margin: 15px;
+    margin: 4em;
+    margin-bottom: 7em;
     top: 25%;
     left: 0;
     font-size: 2em;
     display: block;
     img {
-        width: 75%;
+        width: 50%;
+    }
+    h3 {
+    margin-bottom: 2em;
     }
 }
 
@@ -278,7 +285,7 @@ a.gplus:active { background-position: -80px -80px; }
       text-align: center;
       border-right: 1px solid #ccc;
       text-decoration: none;
-      //font: 1em "Trebuchet MS", Arial, sans-serif;
+      font: 1em $font;
     }  
 
      a:hover {
