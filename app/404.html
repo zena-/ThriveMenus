@@ -18,7 +18,7 @@
                 padding: 30px 10px;
                 font-size: 20px;
                 line-height: 1.4;
-                color: #737373;
+                color: pink; /*#737373;*/
                 background: #f0f0f0;
                 -webkit-text-size-adjust: 100%;
                 -ms-text-size-adjust: 100%;
@@ -26,7 +26,7 @@
 
             html,
             input {
-                font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+                font-family: cursive; "Helvetica Neue", Helvetica, Arial, sans-serif;
             }
 
             body {
@@ -37,7 +37,11 @@
                 border-radius: 4px;
                 margin: 0 auto;
                 box-shadow: 0 1px 10px #a7a7a7, inset 0 1px 0 #fff;
-                background: #fcfcfc;
+                background: rgba(34,34,34,.5); /*#fcfcfc;*/
+            }
+
+            #found {
+                margin: 3em;
             }
 
             h1 {
@@ -141,13 +145,32 @@
     </head>
     <body>
         <div class="container">
-            <h1>Not found <span>:(</span></h1>
-            <p>Sorry, but the page you were trying to view does not exist.</p>
-            <p>It looks like this was the result of either:</p>
-            <ul>
-                <li>a mistyped address</li>
-                <li>an out-of-date link</li>
-            </ul>
+            <img src="images/Thrive-Menu-Logo.png">
+
+            <div id="found">
+                <h2>Your looking for the right thing, but in the wrong place</h2>
+                
+                <h3>That item is no loner on the list <span>:(</span></h3>
+                <br>
+                <p>Sorry, but the drink menu is wet.</p>
+                <p>It looks like this was the result of either:</p>
+                <ul>
+                    <li>Hipsters</li>
+                    <li>20 something year olds</li>
+                    <li>Ben</li>
+                    <li>CJ</li>
+                    <li>the L train</li>
+                    <li>a mistyped address</li>
+                    <li>an out-of-date link</li>
+                    <span>~ or ~</span>
+                    <li>all the above</li>
+                </ul>
+                <br>
+                <p>Don't worry, we can be found on <a class="twit" href="https://twitter.com/thrivemenu"target=_"blank" title="Twitter">Twitter</a> ,
+              <a class="fbook" href="https://www.facebook.com/ThriveMenu"target=_"blank" title="Facebook">Facebook</a> and in the apple app store. See you soon</p>
+            </div>    
+
+            <img id="phone" src="images/iphone-hand.png">
             <script>
                 var GOOG_FIXURL_LANG = (navigator.language || '').slice(0,2),GOOG_FIXURL_SITE = location.host;
             </script>
