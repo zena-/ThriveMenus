@@ -1,6 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,700italic,400italic);
 
-$color: rgb(34,34,34);
+$color: rgb(34,34,34); // black
+$green: rgb(58, 127, 56);
+$clear: rgba(255,255,255,0.5);
 
 // bower:scss
 // endbower
@@ -14,26 +16,18 @@ body {
     color: #667;
 }
 
-////// founder section
-.join {
-    padding: 4em;
-    color: $color;
-    border-top: 1px solid #ccc; 
-
-    p {
-    font-size: 14px;
-    }
-}
-
 //// order section 
 #order {
     padding: 5em;
+    border-top: 1px solid $green; 
 
     h3 {
-    text-align: center; }
+    text-align: center; 
+    margin-bottom: 1.5em;
+    font-size: 2em;}
 
     img {
-    width: 15%;
+    width: 17%;
     height: auto; }
  }
 
@@ -55,6 +49,7 @@ body {
     height: auto; }
 }
 
+
 .park {
     margin: 15px;
 }
@@ -62,7 +57,7 @@ body {
 ////// button 
 button {
     box-shadow: 0 3px 10px #333;
-    color: green;
+    color: rgba(58, 127, 56, 0.99);
     border-radius: 9px;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
     font: bold 17px Arial;
@@ -120,7 +115,7 @@ section {
 }
 
 .wrapper {
-    background: rgba(255,255,255,0.5);
+    background: $clear;
     padding: 15px;
     height: 100%;
     margin: 5px 5px; 
@@ -145,8 +140,37 @@ section {
 }
 
 #location {
-    // padding: 2em;
-    margin: 4em;
+    padding: 5em;
+    margin: 7em;
+    text-align: center;
+}
+
+////// founder section
+.join {
+    padding: 4em;
+    color: $color;
+    margin: 5em;
+
+    p {
+    font-size: 14px;
+    }
+}
+
+/////// part
+#part {
+    background: url(../images/Background-Image.png) no-repeat center center fixed; 
+    background-size: 30em;
+    display: block;
+    width: auto;
+    height: 2em;
+    padding: 2px 22px;
+    top: 25%;
+    left: 0;
+    font-size: 2em;
+    display: block;
+    img {
+        width: 75%;
+    }
 }
 
 ////// section menu image 
@@ -238,10 +262,9 @@ a.gplus:active { background-position: -80px -80px; }
   top: 0;
   left: 0;
   width: 100%;
-  //z-index: 2;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px dotted #ccc;
   text-align: center;
-  background: rgba(58, 127, 56, 0.99);
+  //background: rgba(58, 127, 56, 0.99);
 
   nav {
     border-left: 1px solid #ccc;
@@ -251,7 +274,7 @@ a.gplus:active { background-position: -80px -80px; }
       margin: 0;
       padding: 15px 0;
       text-transform: uppercase;
-      color: white;
+      color: rgba(58, 127, 56, 0.99);
       text-align: center;
       border-right: 1px solid #ccc;
       text-decoration: none;

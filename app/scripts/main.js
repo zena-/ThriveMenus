@@ -33,9 +33,9 @@ $(function(){
 
 //////////// popover ///////////
 
-	$('.pop').click(function(){
-		$('#element').popover('show'); 
-	});	   
+	$('.pop').popover(function(){
+		$('img').trigger('click');
+	});
 		    
 //////// nav ////
 
