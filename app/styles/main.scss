@@ -21,23 +21,9 @@ body {
     }
 }
 
-//// order section 
-#order {
-    padding: 5em;
-    //border-top: 1px solid $green; 
-
-    h3 {
-    text-align: center; 
-    margin-bottom: 1.5em;
-    font-size: 2em;}
-
-    img {
-    width: 17%;
-    height: auto; }
- }
-
  /////banner
  #banner {
+    //background: url(../images/Background-Image.png) repeat center center fixed; 
     background: url(../images/iphone-hand.png) no-repeat right bottom;
     background-size: 40%; 
     top: 0;
@@ -80,13 +66,12 @@ button {
 ////// phone section
 #phoneimg {
     margin-bottom: 3em;
-    padding: 5em;
+    padding: 8em;
     height: 100%;
     background: silver; 
 
-    h2, h4 {
-        color: white;
-        text-align: center; } 
+    h3 {
+        margin-bottom: 3em; } 
 
     p {
         color: $color; }
@@ -116,7 +101,7 @@ html {
 }
 
 section {
-    margin-bottom: 3em;
+    margin-bottom: 4em;
 }
 
 .wrapper {
@@ -149,6 +134,7 @@ section {
     margin: 7em;
     text-align: center;
     border-bottom: 1px solid $green; 
+    margin-bottom: 12em;
 }
 
 ////// founder section
@@ -156,6 +142,7 @@ section {
     padding: 4em;
     color: $color;
     margin: 5em;
+    margin-bottom: 12em;
 
     p {
     font-size: 14px;
@@ -170,6 +157,7 @@ section {
     width: auto;
     height: 2em;
     padding: 2px 22px;
+    margin: 5em;
     top: 25%;
     left: 0;
     font-size: 2em;
@@ -178,6 +166,24 @@ section {
         width: 75%;
     }
 }
+
+//// order section 
+#order {
+    padding: 7em;
+    //border-top: 1px solid $green; 
+    background: url(../images/order.jpg) no-repeat center center fixed;
+    margin-bottom: 12em;
+
+    h3 {
+    text-align: center; 
+    margin-bottom: 1.5em;
+    font-size: 2em;}
+
+    img {
+    width: 17%;
+    height: auto; }
+ }
+
 
 ////// section menu image 
 
@@ -198,6 +204,9 @@ section {
     h3 {
     margin-bottom: 2em;
     }
+    .carousel-inner{
+    width: 75%;
+    }
 }
 
 ///////// footer  
@@ -205,11 +214,10 @@ section {
 footer {
     text-align: center;
     font-size: 1em;
-    padding: 2em;
+    padding: 3em;
     background: #eee;
     border-top: 1px solid #ccc;
     text-align: center;
-    //margin-bottom: 3em
 }
 
 ///// sign in
@@ -271,7 +279,6 @@ a.gplus:active { background-position: -80px -80px; }
   width: 100%;
   border-bottom: 1px dotted #ccc;
   text-align: center;
-  //background: rgba(58, 127, 56, 0.99);
 
   nav {
     border-left: 1px solid #ccc;
