@@ -1,13 +1,26 @@
 $(function(){
 
+	'use strict';
+	var window_height = $(window).height(),
+       content_height = window_height - 200;
+
+     $('#banner').height(content_height);
+
+ //    $(window).resize(function() {
+	//     if ($(window).width() < 1110) {
+	//         $('section').height(content_height);
+	//     }
+	// });
+
+
 	/////////// slider ////////
 
-     $('.carousel').carousel({
-		  interval: 5000
-		})
+    $('.carousel').carousel({
+		interval: 5000
+	});
 
 ///////phone imge fade ////////
-    'use strict';
+    
 	$('#phoneimg').hover(function(){
 	    $('#phone').stop().fadeTo(400,1);
 	}, function() {

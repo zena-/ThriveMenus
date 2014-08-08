@@ -1,6 +1,9 @@
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,700italic,400italic);
 @import url(http://fonts.googleapis.com/css?family=Playfair+Display+SC);
 
+.crosshair { cursor: crosshair; 
+}
+
 $color: rgb(34,34,34); // black
 $green: rgb(58, 127, 56);
 $clear: rgba(255,255,255,0.5);
@@ -23,21 +26,31 @@ body {
 
  /////banner
  #banner {
-    //background: url(../images/Background-Image.png) repeat center center fixed; 
-    background: url(../images/iphone-hand.png) no-repeat right bottom;
-    background-size: 40%; 
+    background: url(../images/white-wood.jpg) repeat center center fixed; 
+    //background: url(../images/iphone-hand.png) no-repeat right bottom;
+    //background-size: 40%; 
     top: 0;
     left: 0;
     z-index: 1;
     padding-left: 5em;
-    padding-bottom: 15em;
-    background-color: $color;
+    padding-bottom: 12em;
+    //background-color: $color;
     margin-bottom: 0;
 
     img {
     padding-left: 0.5em;
+    margin-bottom: 2em;
+    margin-top: 3em;
     width: 27%;
-    height: auto; }
+    height: auto;}
+
+    button {
+    margin-left: 6em;
+    }
+
+    #tm {
+    margin-left: 4.7em;
+    }
 }
 
 
@@ -65,9 +78,8 @@ button {
 
 ////// phone section
 #phoneimg {
-    margin-bottom: 3em;
-    padding: 8em;
-    height: 100%;
+    //margin-bottom: 3em;
+    padding: 5em;
     background: silver; 
 
     h3 {
@@ -130,42 +142,57 @@ section {
 }
 
 #location {
-    padding: 5em;
-    margin: 7em;
+    padding: 8em 5em;
     text-align: center;
-    border-bottom: 1px solid $green; 
+    border-bottom: 1px solid $green;
+    border-top: 1px solid $green; 
     margin-bottom: 12em;
+    .well {
+    padding: 6em;
+    }
+    h3 {
+    margin-bottom: 1em;
+    }
 }
 
 ////// founder section
 .join {
-    padding: 4em;
+    padding: 7em 2em;
     color: $color;
-    margin: 5em;
-    margin-bottom: 12em;
+    margin: 5em 0;
+    background: url(../images/Background-Image.png) no-repeat center center fixed; 
+    background-size: cover;
+
+    div {
+    margin-top: 6em;
+    background: $clear;
+    padding: 4em;
+    }
 
     p {
-    font-size: 14px;
+    font-size: 15px;
+    }
+
+    .glyphicon glyphicon-leaf {
+    color: $green;
     }
 }
 
 /////// part
+
 #part {
     background: url(../images/Background-Image.png) no-repeat center center fixed; 
-    background-size: 30em;
-    display: block;
-    width: auto;
-    height: 2em;
-    padding: 2px 22px;
-    margin: 5em;
-    top: 25%;
+    background-size: 90em;
+    //display: block;
+    width: 100%;
+    height: 2.5em;
+    margin: 1.5em 0;
     left: 0;
-    font-size: 2em;
-    display: block;
     img {
         width: 75%;
     }
 }
+
 
 //// order section 
 #order {
@@ -173,6 +200,7 @@ section {
     //border-top: 1px solid $green; 
     background: url(../images/order.jpg) no-repeat center center fixed;
     margin-bottom: 12em;
+    padding-bottom: 10em;
 
     h3 {
     text-align: center; 
@@ -181,7 +209,8 @@ section {
 
     img {
     width: 17%;
-    height: auto; }
+    height: auto; 
+    cursor: crosshair;}
  }
 
 
@@ -213,11 +242,12 @@ section {
 
 footer {
     text-align: center;
-    font-size: 1em;
-    padding: 3em;
+    font-size: 1.3em;
+    padding: 4em;
     background: #eee;
     border-top: 1px solid #ccc;
     text-align: center;
+    margin-top:4em;
 }
 
 ///// sign in
@@ -273,11 +303,12 @@ a.gplus:active { background-position: -80px -80px; }
 
 //////// navbar
 #navbar {
-  //position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
+  z-index: 2;
   width: 100%;
-  border-bottom: 1px dotted #ccc;
+  //border-bottom: 1px dotted #ccc;
   text-align: center;
 
   nav {
@@ -290,7 +321,7 @@ a.gplus:active { background-position: -80px -80px; }
       text-transform: uppercase;
       color: rgba(58, 127, 56, 0.99);
       text-align: center;
-      border-right: 1px solid #ccc;
+      //border-right: 1px solid #ccc;
       text-decoration: none;
       font: 1em $font;
     }  
