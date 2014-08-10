@@ -4,7 +4,7 @@ $(function(){
 	var window_height = $(window).height(),
        content_height = window_height - 200;
 
-     $('#banner').height(content_height);
+    $('#banner').height(content_height);
 
  //    $(window).resize(function() {
 	//     if ($(window).width() < 1110) {
@@ -39,14 +39,14 @@ $(function(){
 	        return false;
 	    });
 		 
-		// // Going back to Social Forms
-	 //    $('.back_btn').click(function () {
-	 //        $('.user_login').hide();
-	 //        $('.user_register').hide();
-	 //        $('.social_login').show();
-	 //        $('#myModalLabel').text('Login');
-	 //        return false;
-	 //    });
+		// Going back to Social Forms
+	    $('.back_btn').click(function () {
+	        $('.user_login').hide();
+	        $('.user_register').hide();
+	        $('.social_login').show();
+	        $('#myModalLabel').text('Login');
+	        return false;
+	    });
 
     });
 
@@ -64,10 +64,12 @@ $(function(){
 
   // fix hidden links on window resize
 
-  // $(window).resize(function() {
-  //   if ($(window).width() > 700) {
-  //     $('#menu-links').removeAttr('style');
-  //   }
-  // });
+    $(window).resize(function() {
+        if ($(window).width() > 700) {
+            $('#menu-links').removeAttr('style');
+        }
+    });
+
+/////
 
 });
